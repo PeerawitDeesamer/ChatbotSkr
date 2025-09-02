@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to SKR Chatbot</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Welcome to SKR Chatbot</h1>
+        <span class="tag">ทดลองถามได้เลย • รองรับเรื่องในสโคปโรงเรียน</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <h2 class="hero-title">Welcome To Skr chatbot 🎓🤖</h2>
+      <p class="hero-sub">
+        ถามได้ทุกเรื่องในสโคปโรงเรียน: ตาราง/การเรียน/ชมรม/ติดต่อครู/ระเบียบ/ค่าใช้จ่าย ฯลฯ
+        (ลองพิมพ์ว่า “แผนการเรียนมีอะไรบ้าง” หรือ “เวลาเปิด–ปิดกี่โมง”)
+      </p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Chat Column -->
+    <section class="card" aria-label="chat">
+      <div class="card-header">
+        <h2>แชทกับบอท</h2>
+        <span class="muted">บอทจะตอบในไม่กี่วินาที</span>
+      </div>
+      <div class="card-body">
+        <div id="chat-window" role="log" aria-live="polite" aria-label="ข้อความแชท">
+          <div class="chat-message bot-message">
+            <p>สวัสดีครับพิมพ์คำถามเกี่ยวกับโรงเรียนมาได้เลย แล้วเดี๋ยวพี่บอทช่วยตอบให้ครับ</p>
+          </div>
+        </div>
+        <div class="composer">
+          <!-- เอา autofocus ออก ให้กดเองเวลาอยากพิมพ์ -->
+          <textarea id="user-input" placeholder="พิมพ์คำถามของคุณที่นี่... (กด Enter เพื่อส่ง)" rows="2"></textarea>
+          <button id="send-btn">ส่ง</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Column -->
+    <aside class="side">
+      <section class="card">
+        <div class="card-header">
+          <h2>ตัวอย่างคำถามเร็ว</h2>
+        </div>
+        <div class="card-body" style="padding:14px;">
+          <div class="faq-grid">
+            <button class="faq-btn" data-question="โรงเรียนมีสายการเรียนอะไรบ้าง?">สายการเรียน</button>
+            <button class="faq-btn" data-question="โรงเรียนอยู่ที่ไหน?">ที่อยู่โรงเรียน</button>
+            <button class="faq-btn" data-question="เวลาเปิด–ปิดกี่โมง?">เวลาเปิด–ปิด</button>
+            <button class="faq-btn" data-question="ติดต่อครูฝ่ายวิชาการได้อย่างไร?">ติดต่อฝ่ายวิชาการ</button>
+          </div>
+          <p class="muted" style="margin-top:10px;">
+            กดปุ่มเพื่อส่งคำถามตัวอย่าง หรือพิมพ์เองได้ทุกเมื่อ
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-header"><h2>ประกาศ/ข้อมูลล่าสุด</h2></div>
+        <div class="card-body" style="padding:14px;">
+          <p class="muted">วางข่าวสารสั้น ๆ เช่น ปรับเวลาเปิด–ปิด, วันหยุด, กิจกรรมพิเศษ ฯลฯ</p>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
